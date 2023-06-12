@@ -8,7 +8,7 @@
                 <a class="nav-link" href="{{ route('home') }}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{{ route('comics') }}">Elenco Fumetti</a>
+                <a class="nav-link" href="{{ route('comics.index') }}">Elenco Fumetti</a>
               </li>
             </ul>
           </div>
