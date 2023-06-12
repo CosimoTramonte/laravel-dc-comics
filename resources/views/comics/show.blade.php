@@ -23,6 +23,8 @@
             <h5>Description: </h5>
             {{-- stampo testo HTML  --}}
             <p>{!! $comic->description !!}</p>
+
+            <button class="btn btn-success"><a class="text-white text-decoration-none" href="{{ route('comics.index') }}">TORNA ALL'ELENCO</a></button>
         </div>
 
 
