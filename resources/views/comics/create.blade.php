@@ -38,11 +38,11 @@
                 <textarea
                     type="text"
                     id="description"
-                    value="{{ old('description') }}"
                     placeholder="description"
                     name="description"
                     class="form-control @error('description') is-invalid @enderror"
                 >
+                    {{ old('description') }}
                 </textarea>
             </div>
 

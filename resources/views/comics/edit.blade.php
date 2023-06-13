@@ -39,11 +39,11 @@
                 <textarea
                     type="text"
                     id="description"
-                    value="{{ old('description', $comic->description) }}"
                     placeholder="description"
                     name="description"
                     class="form-control @error('description') is-invalid @enderror"
                 >
+                    {{ old('description', $comic->description) }}
                 </textarea>
             </div>
 
