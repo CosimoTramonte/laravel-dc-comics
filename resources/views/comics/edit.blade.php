@@ -3,7 +3,7 @@
 @section('content')
 
     <div class="container py-5">
-        <h1>Creazione Nuovo Comic</h1>
+        <h1>Modifica Comic</h1>
 
         @if ($errors->any())
 
@@ -17,16 +17,17 @@
 
         @endif
 
-        <form action="{{ route('comics.store') }}" method="POST">
+        <form action="{{ route('comics.update',  $comic) }}" method="POST">
 
             @csrf
+            @method('PUT')
 
             <div class="mb-3">
                 <label for="title" class="form-label">Titolo</label>
                 <input
                     type="text"
                     id="title"
-                    value="{{ old('title') }}"
+                    value="{{ old('title', $comic->title) }}"
                     placeholder="title"
                     name="title"
                     class="form-control @error('title') is-invalid @enderror"
@@ -38,7 +39,7 @@
                 <textarea
                     type="text"
                     id="description"
-                    value="{{ old('description') }}"
+                    value="{{ old('description', $comic->description) }}"
                     placeholder="description"
                     name="description"
                     class="form-control @error('description') is-invalid @enderror"
@@ -51,7 +52,7 @@
                 <input
                     type="text"
                     id="thumb"
-                    value="{{ old('thumb') }}"
+                    value="{{ old('thumb', $comic->thumb) }}"
                     placeholder="thumb"
                     name="thumb"
                     class="form-control @error('thumb') is-invalid @enderror"
@@ -63,7 +64,7 @@
                 <input
                     type="text"
                     id="price"
-                    value="{{ old('price') }}"
+                    value="{{ old('price', $comic->price) }}"
                     placeholder="price"
                     name="price"
                     class="form-control @error('price') is-invalid @enderror"
@@ -75,7 +76,7 @@
                 <input
                     type="text"
                     id="series"
-                    value="{{ old('series') }}"
+                    value="{{ old('series', $comic->series) }}"
                     placeholder="series"
                     name="series"
                     class="form-control @error('series') is-invalid @enderror"
@@ -87,7 +88,7 @@
                 <input
                     type="text"
                     id="sale_date"
-                    value="{{ old('sale_date') }}"
+                    value="{{ old('sale_date', $comic->sale_date) }}"
                     placeholder="YYYY-MM-DD"
                     name="sale_date"
                     class="form-control @error('sale_date') is-invalid @enderror"
@@ -99,7 +100,7 @@
                 <input
                     type="text"
                     id="type"
-                    value="{{ old('type') }}"
+                    value="{{ old('type', $comic->type) }}"
                     placeholder="type"
                     name="type"
                     class="form-control @error('type') is-invalid @enderror"
@@ -111,7 +112,7 @@
                 <input
                     type="text"
                     id="artists"
-                    value="{{ old('artists') }}"
+                    value="{{ old('artists', $comic->artists) }}"
                     placeholder="artists"
                     name="artists"
                     class="form-control @error('artists') is-invalid @enderror"
@@ -123,7 +124,7 @@
                 <input
                     type="text"
                     id="writers"
-                    value="{{ old('writers') }}"
+                    value="{{ old('writers', $comic->writers) }}"
                     placeholder="writers"
                     name="writers"
                     class="form-control @error('writers') is-invalid @enderror"

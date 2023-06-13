@@ -4,7 +4,7 @@
     <div class="container py-5">
         <h1 class="my-3 text-center">{{ $comic->title }}</h1>
         <div class="d-flex justify-content-center">
-            <a class="btn btn-warning mx-2" href="#"><i class="fa-solid fa-pencil"></i></a>
+            <a class="btn btn-warning mx-2" href="{{ route('comics.edit', $comic ) }}"><i class="fa-solid fa-pencil"></i></a>
             <a class="btn btn-danger" href="#"><i class="fa-solid fa-trash"></i></a>
         </div>
 
