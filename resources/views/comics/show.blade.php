@@ -3,6 +3,11 @@
 @section('content')
     <div class="container py-5">
         <h1 class="my-3 text-center">{{ $comic->title }}</h1>
+        <div class="d-flex justify-content-center">
+            <a class="btn btn-warning mx-2" href="#"><i class="fa-solid fa-pencil"></i></a>
+            <a class="btn btn-danger" href="#"><i class="fa-solid fa-trash"></i></a>
+        </div>
+
 
 
         <div class="py-4 d-flex justify-content-center">
@@ -24,7 +29,7 @@
             {{-- stampo testo HTML  --}}
             <p>{!! $comic->description !!}</p>
 
-            <button class="btn btn-success"><a class="text-white text-decoration-none" href="{{ route('comics.index') }}">TORNA ALL'ELENCO</a></button>
+            <button class="btn btn-primary"><a class="text-white text-decoration-none" href="{{ route('comics.index') }}">TORNA ALL'ELENCO</a></button>
         </div>
 
 
