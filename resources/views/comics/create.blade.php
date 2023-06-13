@@ -27,10 +27,10 @@
                 <input
                     type="text"
                     id="title"
+                    value="{{ old('title') }}"
                     placeholder="title"
                     name="title"
-                    class="form-control"
-                    value=""
+                    class="form-control @error('title') is-invalid @enderror"
                 >
             </div>
 
@@ -39,10 +39,10 @@
                 <textarea
                     type="text"
                     id="description"
+                    value="{{ old('description') }}"
                     placeholder="description"
                     name="description"
-                    class="form-control"
-                    value=""
+                    class="form-control @error('description') is-invalid @enderror"
                 >
                 </textarea>
             </div>
@@ -52,10 +52,10 @@
                 <input
                     type="text"
                     id="thumb"
+                    value="{{ old('thumb') }}"
                     placeholder="thumb"
                     name="thumb"
-                    class="form-control"
-                    value=""
+                    class="form-control @error('thumb') is-invalid @enderror"
                 >
             </div>
 
@@ -64,10 +64,10 @@
                 <input
                     type="text"
                     id="price"
+                    value="{{ old('price') }}"
                     placeholder="price"
                     name="price"
-                    class="form-control"
-                    value=""
+                    class="form-control @error('price') is-invalid @enderror"
                 >
             </div>
 
@@ -76,10 +76,10 @@
                 <input
                     type="text"
                     id="series"
+                    value="{{ old('series') }}"
                     placeholder="series"
                     name="series"
-                    class="form-control"
-                    value=""
+                    class="form-control @error('series') is-invalid @enderror"
                 >
             </div>
 
@@ -88,10 +88,10 @@
                 <input
                     type="text"
                     id="sale_date"
+                    value="{{ old('sale_date') }}"
                     placeholder="YYYY-MM-DD"
                     name="sale_date"
-                    class="form-control"
-                    value=""
+                    class="form-control @error('sale_date') is-invalid @enderror"
                 >
             </div>
 
@@ -100,10 +100,10 @@
                 <input
                     type="text"
                     id="type"
+                    value="{{ old('type') }}"
                     placeholder="type"
                     name="type"
-                    class="form-control"
-                    value=""
+                    class="form-control @error('type') is-invalid @enderror"
                 >
             </div>
 
@@ -112,10 +112,10 @@
                 <input
                     type="text"
                     id="artists"
+                    value="{{ old('artists') }}"
                     placeholder="artists"
                     name="artists"
-                    class="form-control"
-                    value=""
+                    class="form-control @error('artists') is-invalid @enderror"
                 >
             </div>
 
@@ -124,10 +124,10 @@
                 <input
                     type="text"
                     id="writers"
+                    value="{{ old('writers') }}"
                     placeholder="writers"
                     name="writers"
-                    class="form-control"
-                    value=""
+                    class="form-control @error('writers') is-invalid @enderror"
                 >
             </div>
 
